@@ -1,5 +1,8 @@
 #include <iostream>
-#include "bigint_function_definitions.h"
+
+// include it in the include folder of your compiler
+#include <bigint.h>
+
 using namespace std;
 
 
