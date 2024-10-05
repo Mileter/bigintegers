@@ -27,11 +27,7 @@
     SOFTWARE.
 */
 
-
-
-#pragma once
-
-#include "bigint class.h"
+#include "bigint.h"
 
 #define big_abs bigint::_big_abs
 #define big_max bigint::_big_max

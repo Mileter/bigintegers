@@ -6,6 +6,7 @@
     MIT License
 
     Created by Roshan Gupta on 16-10-2020
+	Modified by Miles (Mileter) on 05-10-2024
     Copyright (c) 2020 Roshan Gupta
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -27,12 +28,10 @@
     SOFTWARE.
 */
 
-#pragma once
-
 #include <string>
 #include <sstream>
 #include <vector>
-#include <math.h>
+#include <cmath>
 #include <limits>
 
 class bigint {
