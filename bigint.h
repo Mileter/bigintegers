@@ -6,7 +6,10 @@
     MIT License
 
     Created by Roshan Gupta on 16-10-2020
-    Copyright (c) 2020 Roshan Gupta
+    Copyright (c) 2020-2024 Roshan Gupta
+	
+    Modified and changed hands by Mileter on 05-10-2024
+    Copyright (c) 2024 Mileter
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal

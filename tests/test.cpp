@@ -1,3 +1,11 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * LICENSE                                           *
+ *                                                   *
+ * This file has no license:                         *
+ * consider that this is under the MIT license that  *
+ * should be distributed with this file.             *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 #include <iostream>
 
 // included it in the include folder of your compiler?
