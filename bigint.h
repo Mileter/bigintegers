@@ -1419,7 +1419,7 @@ bool bigint::isPrime(std::string s) {                // checks if the String as 
 #define balog2_w bigint::_big_antilog2
 #define balog10_w bigint::_big_antilog10
 
-[[deprecated("Use bswap() for the same functionality.")]]
+//[[deprecated("Use bswap() for the same functionality.")]]
 #define bswap_w bigint::_big_swap
 
 // there should be no c varient
@@ -1447,49 +1447,49 @@ bool bigint::isPrime(std::string s) {                // checks if the String as 
 #define bfact bigint::_big_fact_c
 
 // legacy
-[[deprecated("Use babs_w() for the same functionality.")]]
+//[[deprecated("Use babs_w() for the same functionality.")]]
 #define big_abs bigint::_big_abs
 
-[[deprecated("Use bmax_w() for the same functionality.")]]
+//[[deprecated("Use bmax_w() for the same functionality.")]]
 #define big_max bigint::_big_max
 
-[[deprecated("Use bmin_w() for the same functionality.")]]
+//[[deprecated("Use bmin_w() for the same functionality.")]]
 #define big_min bigint::_big_min
 
-[[deprecated("Use bpow_w() for the same functionality.")]]
+//[[deprecated("Use bpow_w() for the same functionality.")]]
 #define big_pow bigint::_big_pow
 
-[[deprecated("Use bsqrt_w() for the same functionality.")]]
+//[[deprecated("Use bsqrt_w() for the same functionality.")]]
 #define big_sqrt bigint::_big_sqrt
 
-[[deprecated("Use blog2_w() for the same functionality.")]]
+//[[deprecated("Use blog2_w() for the same functionality.")]]
 #define big_log2 bigint::_big_log2
 
-[[deprecated("Use blog10_w() for the same functionality.")]]
+//[[deprecated("Use blog10_w() for the same functionality.")]]
 #define big_log10 bigint::_big_log10
 
-[[deprecated("Use blogbase_w() for the same functionality.")]]
+//[[deprecated("Use blogbase_w() for the same functionality.")]]
 #define big_logwithbase bigint::_big_logwithbase
 
-[[deprecated("Use balog2_w() for the same functionality.")]]
+//[[deprecated("Use balog2_w() for the same functionality.")]]
 #define big_antilog2 bigint::_big_antilog2
 
-[[deprecated("Use balog10_w() for the same functionality.")]]
+//[[deprecated("Use balog10_w() for the same functionality.")]]
 #define big_antilog10 bigint::_big_antilog10
 
-[[deprecated("Use bswap() for the same functionality.")]]
+//[[deprecated("Use bswap() for the same functionality.")]]
 #define big_swap bigint::_big_swap
 
-[[deprecated("Use brev_w() for the same functionality.")]]
+//[[deprecated("Use brev_w() for the same functionality.")]]
 #define big_reverse bigint::_big_reverse
 
-[[deprecated("Use bgcd_w() for the same functionality.")]]
+//[[deprecated("Use bgcd_w() for the same functionality.")]]
 #define big_gcd bigint::_big_gcd
 
-[[deprecated("Use blcm_w() for the same functionality.")]]
+//[[deprecated("Use blcm_w() for the same functionality.")]]
 #define big_lcm bigint::_big_lcm
 
-[[deprecated("Use bfact_w() for the same functionality.")]]
+//[[deprecated("Use bfact_w() for the same functionality.")]]
 #define big_fact bigint::_big_fact
 
 // too confusing to abbreviate
@@ -1502,4 +1502,5 @@ bool bigint::isPrime(std::string s) {                // checks if the String as 
 
 // conversion
 #define to_bigint bigint::_to_bigint
+
 }
