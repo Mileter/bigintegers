@@ -37,28 +37,6 @@
 #include <limits>
 
 namespace larints {
-
-// Macros for Programmer(User) use cases.
-
-#define big_abs bigint::_big_abs
-#define big_max bigint::_big_max
-#define big_min bigint::_big_min
-#define big_pow bigint::_big_pow
-#define big_sqrt bigint::_big_sqrt
-#define big_log2 bigint::_big_log2
-#define big_log10 bigint::_big_log10
-#define big_logwithbase bigint::_big_logwithbase
-#define big_antilog2 bigint::_big_antilog2
-#define big_antilog10 bigint::_big_antilog10
-#define big_swap bigint::_big_swap
-#define big_reverse bigint::_big_reverse
-#define big_gcd bigint::_big_gcd
-#define big_lcm bigint::_big_lcm
-#define big_fact bigint::_big_fact
-#define big_isPrime bigint::_big_isPrime
-#define big_isPalindrome bigint::_big_isPalindrome
-#define to_bigint bigint::_to_bigint
-
 // Big Integer Class
 
 class bigint {
@@ -83,8 +61,6 @@ class bigint {
         static bool is_minimum(std::string, std::string);
         static bool is_strictlyMinimum(std::string, std::string);
         static bool is_bigint(std::string);
-
-        // Public Property
 
         static std::string abs(std::string);
         static std::string pow(std::string, std::string);
@@ -641,7 +617,86 @@ class bigint {
         static bool _big_isPrime(bigint &a) {                   // Check if the Big Integer is Prime Integer.
             return isPrime(a.str);
         }
-
+		
+		// bigint file copied varients
+		
+		static bigint _big_max_c(bigint a, bigint b) {     // returns the maximum value between two Big Integers.
+            bigint ans;
+            ans.str = maximum(a.str, b.str);
+            return ans;
+        }
+        static bigint _big_min_c(bigint a, bigint b) {      // returns the minimum value between two Big Integers.
+            bigint ans;
+            ans.str = minimum(a.str, b.str);
+            return ans;
+        }        
+        static bigint _big_abs_c(bigint a) {                 // returns the absolute value of Big Integer.
+            bigint ans;
+            ans.str = abs(a.str);
+            return ans;
+        }
+        static bigint _big_pow_c(bigint a, bigint b) {      // returns the power value between two Big Integers i.e., a^b, ^ -> power
+            bigint ans;
+            ans.str = pow(a.str, b.str);
+            return ans;
+        }
+        static bigint _big_sqrt_c(bigint a) {                // returns the square root value of Big Integer.
+            bigint ans;
+            ans.str = sqrt(a.str);
+            return ans;
+        }
+        static bigint _big_log2_c(bigint a) {                // returns the log of Big Integer to the base of 2.
+            bigint ans;
+            ans.str = log2(a.str);
+            return ans;
+        }
+        static bigint _big_log10_c(bigint a) {               // returns the log of Big Integer to the base of 10.
+            bigint ans;
+            ans.str = log10(a.str);
+            return ans;
+        }
+        static bigint _big_logwithbase_c(bigint a, bigint b) {  // returns the log of Big Integer(a) to the base of (b).
+            bigint ans;
+            ans.str = logwithbase(a.str, b.str);
+            return ans;
+        }
+        static bigint _big_antilog2_c(bigint a) {        // returns the antilog of Big Integer to the base of 2.
+            bigint ans;
+            ans.str = antilog2(a.str);
+            return ans;
+        }
+        static bigint _big_antilog10_c(bigint a) {       // returns the antilog of Big Integer to the base of 10.
+            bigint ans;
+            ans.str = antilog10(a.str);
+            return ans;
+        }
+        static bigint _big_reverse_c(bigint a) {             //Reverses the Big Integer.
+            bigint ans;
+            ans.str = reverse(a.str);
+            return ans;
+        }
+        static bigint _big_gcd_c(bigint a, bigint b) {         // returns the gcd of Big Integers a and b.
+            bigint ans;
+            ans.str = gcd(a.str, b.str);
+            return ans;
+        }
+        static bigint _big_lcm_c(bigint a, bigint b) {          // returns the lcm of Big Integers a and b.
+            bigint ans;
+            ans.str = lcm(a.str, b.str);
+            return ans;
+        }
+        static bigint _big_fact_c(bigint a) {                    // returns the factorial of Big Integer.
+            bigint ans;
+            ans.str = fact(a.str);
+            return ans;
+        }
+        static bool _big_isPalindrome_c(bigint a) {              // Check if the Big Integer is Palindromic Integer.
+            return isPalindrome(a.str);
+        }
+        static bool _big_isPrime_c(bigint a) {                   // Check if the Big Integer is Prime Integer.
+            return isPrime(a.str);
+        }
+		
         // to biginteger functions
 
         static bigint _to_bigint(std::string s) {
@@ -1350,4 +1405,101 @@ bool bigint::isPrime(std::string s) {                // checks if the String as 
     return true;
 }
 
+// Macros for Programmer(User) use cases.
+
+// no copying varients
+#define babs_w bigint::_big_abs
+#define bmax_w bigint::_big_max
+#define bmin_w bigint::_big_min
+#define bpow_w bigint::_big_pow
+#define bsqrt_w bigint::_big_sqrt
+#define blog2_w bigint::_big_log2
+#define blog10_w bigint::_big_log10
+#define blogbase_w bigint::_big_logwithbase
+#define balog2_w bigint::_big_antilog2
+#define balog10_w bigint::_big_antilog10
+
+[[deprecated("Use bswap() for the same functionality.")]]
+#define bswap_w bigint::_big_swap
+
+// there should be no c varient
+#define bswap bigint::_big_swap
+
+#define brev_w bigint::_big_reverse
+#define bgcd_w bigint::_big_gcd
+#define blcm_w bigint::_big_lcm
+#define bfact_w bigint::_big_fact
+
+// variable copying varients
+#define babs bigint::_big_abs_c
+#define bmax bigint::_big_max_c
+#define bmin bigint::_big_min_c
+#define bpow bigint::_big_pow_c
+#define bsqrt bigint::_big_sqrt_c
+#define blog2 bigint::_big_log2_c
+#define blog10 bigint::_big_log10_c
+#define blogbase bigint::_big_logwithbase_c
+#define balog2 bigint::_big_antilog2_c
+#define balog10 bigint::_big_antilog10_c
+#define brev bigint::_big_reverse_c
+#define bgcd bigint::_big_gcd_c
+#define blcm bigint::_big_lcm_c
+#define bfact bigint::_big_fact_c
+
+// legacy
+[[deprecated("Use babs_w() for the same functionality.")]]
+#define big_abs bigint::_big_abs
+
+[[deprecated("Use bmax_w() for the same functionality.")]]
+#define big_max bigint::_big_max
+
+[[deprecated("Use bmin_w() for the same functionality.")]]
+#define big_min bigint::_big_min
+
+[[deprecated("Use bpow_w() for the same functionality.")]]
+#define big_pow bigint::_big_pow
+
+[[deprecated("Use bsqrt_w() for the same functionality.")]]
+#define big_sqrt bigint::_big_sqrt
+
+[[deprecated("Use blog2_w() for the same functionality.")]]
+#define big_log2 bigint::_big_log2
+
+[[deprecated("Use blog10_w() for the same functionality.")]]
+#define big_log10 bigint::_big_log10
+
+[[deprecated("Use blogbase_w() for the same functionality.")]]
+#define big_logwithbase bigint::_big_logwithbase
+
+[[deprecated("Use balog2_w() for the same functionality.")]]
+#define big_antilog2 bigint::_big_antilog2
+
+[[deprecated("Use balog10_w() for the same functionality.")]]
+#define big_antilog10 bigint::_big_antilog10
+
+[[deprecated("Use bswap() for the same functionality.")]]
+#define big_swap bigint::_big_swap
+
+[[deprecated("Use brev_w() for the same functionality.")]]
+#define big_reverse bigint::_big_reverse
+
+[[deprecated("Use bgcd_w() for the same functionality.")]]
+#define big_gcd bigint::_big_gcd
+
+[[deprecated("Use blcm_w() for the same functionality.")]]
+#define big_lcm bigint::_big_lcm
+
+[[deprecated("Use bfact_w() for the same functionality.")]]
+#define big_fact bigint::_big_fact
+
+// too confusing to abbreviate
+#define big_isPrime_w bigint::_big_isPrime
+#define big_isPalindrome_w bigint::_big_isPalindrome
+
+// copy varients
+#define big_isPrime bigint::_big_isPrime_c
+#define big_isPalindrome bigint::_big_isPalindrome_c
+
+// conversion
+#define to_bigint bigint::_to_bigint
 }
