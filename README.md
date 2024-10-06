@@ -10,6 +10,11 @@ Have a beefy computer and want to compute Fermat numbers if you wanted.
 
 ---
 
+# It's a library now!
+Unlike the predecessor, this fork can be used as a library easily. Insert the header into the C++ Compiler's `include` folder, and you're ready to go start using it.
+
+---
+
 # How to use it?
 
 Download the `bigint.h`. 
